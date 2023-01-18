@@ -3,4 +3,4 @@
 Сделано на JS.<br>
 React в процессе изучения. Задание заняло бы много времени.<br>
 По двойому клику карточка переходит в состояние disabled.<br>
-Сайт на https://max-mosquito.github.io/nyamushka/
+Сайт на GitHub Pages https://max-mosquito.github.io/nyamushka/
