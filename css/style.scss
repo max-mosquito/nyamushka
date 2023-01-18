@@ -1,0 +1,253 @@
+@font-face {
+	font-family: 'Exo2.0';
+	src: url('../fonts/Exo2.0-Thin.otf'); 
+	font-weight: 100;
+ font-style: normal;
+ font-stretch: normal;
+ font-variant: normal;
+}
+@import url("../fonts/TrebuchetMS/stylesheet.css");
+*,
+*:before,
+*:after,
+*:focus {
+	padding: 0;
+	margin: 0;
+	border:none;
+	outline: none;
+	box-sizing:border-box;
+}
+a {
+	text-decoration: none;
+}
+li {
+	list-style: none;
+}
+
+body {
+	font-family: "Trebuchet MS",sans-serif;
+	position: relative;
+	background: url('../img/bg.png') center/cover no-repeat;
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.content {
+	max-width: 1200px;
+	padding: 0 20px;
+}
+.title{
+	margin-bottom: 25px;
+	p{
+		color:#ffffff;
+		font-family: "Exo2.0";
+		font-size: 36px;
+		line-height: 44px;
+		text-align: center;
+	}
+}
+.row{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	margin: 0 -20px;
+}
+.card_wrap{
+	flex: 0 0 33.3%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0 20px;
+	margin-bottom: 30px;
+}
+@media (max-width: 575px) {
+	.card_wrap{
+		flex: 0 0 100%;
+	}
+}
+.card{
+	width: 320px;
+}
+@media (max-width: 575px) {
+	.card{
+		max-width: 320px;
+		width: 100%;
+	}
+}
+.card.hoverNormal .item:before {
+	background: url('../img/border_hover_normal.png');
+}
+.card.hoverNormal .item_weight{
+	background-color: #2EA8E6;
+}
+.card.hoverNormal .underline{
+	color: #2EA8E6;
+}
+.card.selected .item:before {
+	background: url('../img/border_selected.png');
+}
+.card.selected .item_weight{
+	background-color: #D91667;
+}
+.card.selected.hoverSelected .item:before {
+	background: url('../img/border_hover_selected.png');
+}
+.card.selected.hoverSelected .item_weight{
+	background-color: #E52E7A;
+}
+.card.disabled .item:before {
+	background: url('../img/border_disabled.png');
+}
+.card.disabled .item_slogan, .card.disabled .item_title, .card.disabled .item_with, .card.disabled .item_portion, .card.disabled .item_mouse, .card.disabled .item_pic{
+	opacity: 0.3;
+}
+.card.disabled .item_weight{
+	background-color: #979797;
+}
+.card.disabled .card_text p{
+	color:#FFFF66;
+}
+.item {
+	width: 100%;
+	height: 480px;
+	background:url("../img/Back.png") center/100% 100% no-repeat;
+	padding-top: 20px;
+	position: relative;
+	margin-bottom: 15px;
+	border-radius: 12px;
+	overflow: hidden;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	flex-direction: column;
+	cursor: pointer;
+		&:before{
+		position: absolute;
+		content: "";
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		background: url('../img/border_normal.png');
+	}
+}
+
+.item_text{
+	padding-left: 50px;
+}
+.item_slogan {
+	margin-bottom: 5px;
+	p{
+		font-family: "Trebuchet MS";
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 19px;
+	}
+}
+.item_title {
+	p{
+		font-size: 48px;
+		font-weight: 700;
+		line-height: 56px;
+	}
+}
+.item_with {
+	margin-bottom: 15px;
+	p{
+		font-size: 24px;
+		font-weight: 700;
+		line-height: 28px;
+	}
+}
+.item_portion, .item_mouse {
+	p{
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 16px;
+		span{
+			font-weight: 700;
+		}
+	}
+}
+.item_mouse {}
+.item_pic {
+	max-width: 320px;
+	width: 100%;
+	height: 280px;
+	img{
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+}
+.item_weight {
+	border-radius: 50%;
+	background: #1698D9;
+	width: 80px;
+	height: 80px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	bottom: 15px;
+	right: 15px;
+	transition:0.3s;
+}
+.item_weight_num {
+	p{
+		font-size: 42px;
+		font-weight: 400;
+		line-height: 42px;
+		color:#ffffff;
+	}
+}
+.item_weight_kg {
+	p{
+		font-size: 21px;
+		font-weight: 400;
+		line-height: 22px;
+		color: #ffffff;
+
+	}
+}
+.item_border{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	img{
+		width: 100%;
+		height: 100%;
+	}
+}
+.card_text{
+	p{
+		font-size: 13px;
+		font-weight: 400;
+		line-height: 15px;
+		color:#ffffff;
+		text-align: center;
+		span{
+			color:#1698D9;
+			font-weight: 700;
+			cursor: pointer;
+		}
+	}
+}
+.underline{
+	position: relative;
+	&:after{
+		position: absolute;
+		content: "";
+		width: 100%;
+		height: 1px;
+		bottom: 0;
+		left: 0;
+		background: url('../img/underline.png') ;
+		background-repeat: round 3;
+	} 
+}
